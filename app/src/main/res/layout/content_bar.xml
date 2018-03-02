@@ -7,7 +7,13 @@
     <com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout
         android:id="@+id/fabToolbarLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:fabId="@id/floating"
+        app:containerId="@id/container"
+        app:fabToolbarId="@id/menuBar"
+        app:hideDuration="500"
+        app:showDuration="500">
+
         <RelativeLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
@@ -20,11 +26,58 @@
                 app:fabSize="normal"
                 app:backgroundTint="@color/colorPrimary"/>
         </RelativeLayout>
+
         <LinearLayout
             android:id="@+id/menuBar"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/snapchat"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/snapchat"
+                android:background="@color/message"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/gmail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/gmail"
+                android:background="@color/email"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/whatsApp"
+                android:layout_width="wrap_content"
+                android:scaleType="centerInside"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/whatsapp"
+                android:background="@color/whatsApp"/>
+
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:layout_weight="1"
+                android:background="@color/twitter"
+                app:srcCompat="@drawable/gorjeo"/>
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:layout_weight="1"
+                android:background="@color/facebook"
+                app:srcCompat="@drawable/facebook" />
         </LinearLayout>
     </com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout>
     
